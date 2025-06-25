@@ -1,0 +1,218 @@
+#include <stdio.h>
+
+// Función para intercambiar dos elementos
+void swap(int *x, int *y) {
+	int temp = *x;
+	*x = *y;
+	*y = temp;
+}
+
+// Función para implementar el método de ordenamiento burbuja
+void bubbleSort(int arr[], int n) {
+	for (int i = 0; i < n - 1; i++) {
+		for (int j = 0; j < n - i - 1; j++) {
+			if (arr[j] > arr[j + 1]) {
+				swap(&arr[j], &arr[j + 1]);
+			}
+		}
+	}
+}
+
+// Función para imprimir el arreglo
+void printArray(int arr[], int n) {
+	for (int i = 0; i < n; i++) {
+		printf("%d ", arr[i]);
+	}
+	printf("\n");
+}
+
+int main() {
+	int n;
+	
+	// Pedir al usuario la cantidad de elementos
+	printf("Ingrese la cantidad de números a ordenar: ");
+	scanf("%d", &n);
+	
+	int arr[5];
+	
+	// Pedir al usuario que ingrese los números
+	printf("Ingrese los números:\n");
+	for (int i = 0; i < n; i++) {
+		scanf("%d", &arr[i]);
+	}
+	
+	printf("Arreglo original:\n");
+	printArray(arr, n);
+	
+	bubbleSort(arr, n);
+	
+	printf("Arreglo ordenado:\n");
+	printArray(arr, n);
+	
+	return 0;
+}
+#include <stdio.h>
+
+// Función para intercambiar dos elementos
+void swap(int *x, int *y) {
+	int temp = *x;
+	*x = *y;
+	*y = temp;
+}
+
+// Función para implementar el método de ordenamiento por selección
+void selectionSort(int arr[], int n) {
+	for (int i = 0; i < n - 1; i++) {
+		int minIndex = i;
+		for (int j = i + 1; j < n; j++) {
+			if (arr[j] < arr[minIndex]) {
+				minIndex = j;
+			}
+		}
+		swap(&arr[minIndex], &arr[i]);
+	}
+}
+
+// Función para imprimir el arreglo
+void printArray(int arr[], int n) {
+	for (int i = 0; i < n; i++) {
+		printf("%d ", arr[i]);
+	}
+	printf("\n");
+}
+
+int main() {
+	int n;
+	
+	// Pedir al usuario la cantidad de elementos
+	printf("Ingrese la cantidad de números a ordenar: ");
+	scanf("%d", &n);
+	
+	int arr[n];
+	
+	// Pedir al usuario que ingrese los números
+	printf("Ingrese los números:\n");
+	for (int i = 0; i < n; i++) {
+		scanf("%d", &arr[i]);
+	}
+	
+	printf("Arreglo original:\n");
+	printArray(arr, n);
+	
+	selectionSort(arr, n);
+	
+	printf("Arreglo ordenado:\n");
+	printArray(arr, n);
+	
+	return 0;
+}
+#include <stdio.h>
+
+// Función para intercambiar dos elementos
+void swap(int *x, int *y) {
+	int temp = *x;
+	*x = *y;
+	*y = temp;
+}
+
+// Función para implementar el método de ordenamiento por selección
+void selectionSort(int arr[], int n) {
+	for (int i = 0; i < n - 1; i++) {
+		int minIndex = i;
+		for (int j = i + 1; j < n; j++) {
+			if (arr[j] < arr[minIndex]) {
+				minIndex = j;
+			}
+		}
+		swap(&arr[minIndex], &arr[i]);
+	}
+}
+
+// Función para imprimir el arreglo
+void printArray(int arr[], int n) {
+	for (int i = 0; i < n; i++) {
+		printf("%d ", arr[i]);
+	}
+	printf("\n");
+}
+
+int main() {
+	int n;
+	
+	// Pedir al usuario la cantidad de elementos
+	printf("Ingrese la cantidad de números a ordenar: ");
+	scanf("%d", &n);
+	
+	int arr[n];
+	
+	// Pedir al usuario que ingrese los números
+	printf("Ingrese los números:\n");
+	for (int i = 0; i < n; i++) {
+		scanf("%d", &arr[i]);
+	}
+	
+	printf("Arreglo original:\n");
+	printArray(arr, n);
+	
+	selectionSort(arr, n);
+	
+	printf("Arreglo ordenado:\n");
+	printArray(arr, n);
+	
+	return 0;
+}
+#include <stdio.h>
+
+// Función para intercambiar dos elementos
+void swap(int *x, int *y) {
+	int temp = *x;
+	*x = *y;
+	*y = temp;
+}
+
+// Función para implementar el método de ordenamiento por selección
+void selectionSort(int arr[], int n) {
+	for (int i = 0; i < n - 1; i++) {
+		int minIndex = i;
+		for (int j = i + 1; j < n; j++) {
+			if (arr[j] < arr[minIndex]) {
+				minIndex = j;
+			}
+		}
+		swap(&arr[minIndex], &arr[i]);
+	}
+}
+
+// Función para imprimir el arreglo
+void printArray(int arr[], int n) {
+	for (int i = 0; i < n; i++) {
+		printf("%d ", arr[i]);
+	}
+	printf("\n");
+}
+
+int main() {
+	int n;
+	
+	// Pedir al usuario la cantidad de elementos
+	printf("Ingrese la cantidad de números a ordenar: ");
+	scanf("%d", &n);
+	
+	int arr[n];
+	
+	// Pedir al usuario que ingrese los números
+	printf("Ingrese los números:\n");
+	for (int i = 0; i < n; i++) {
+		scanf("%d", &arr[i]);
+	}
+	
+	printf("Arreglo original:\n");
+	printArray(arr, n);
+	
+	selectionSort(arr, n);
+	
+	printf("Arreglo ordenado:\n");
+	printArray(arr, n);
+	
+	return 0;
+}

@@ -1,0 +1,78 @@
+#include <stdio.h>
+
+// Función para intercambiar dos elementos
+void swap(int *x, int *y) {
+	int temp = *x;
+	*x = *y;
+	*y = temp;
+}
+
+// Ordenamiento burbuja
+void bubbleSort(int arr[], int n) {
+	for (int i = 0; i < n - 1; i++) {
+		for (int j = 0; j < n - i - 1; j++) {
+			if (arr[j] > arr[j + 1]) {
+				swap(&arr[j], &arr[j + 1]);
+			}
+		}
+	}
+}
+
+// Ordenamiento por selección
+void selectionSort(int arr[], int n) {
+	for (int i = 0; i < n - 1; i++) {
+		int minIndex = i;
+		for (int j = i + 1; j < n; j++) {
+			if (arr[j] < arr[minIndex]) {
+				minIndex = j;
+			}
+		}
+		swap(&arr[minIndex], &arr[i]);
+	}
+}
+
+// Función para imprimir el arreglo
+void printArray(int arr[], int n) {
+	for (int i = 0; i < n; i++) {
+		printf("%d ", arr[i]);
+	}
+	printf("\n");
+}
+
+int main() {
+	int n, choice;
+	
+	printf("Ingrese la cantidad de números a ordenar: ");
+	scanf("%d", &n);
+	
+	int arr[n];
+	
+	printf("Ingrese los números:\n");
+	for (int i = 0; i < n; i++) {
+		scanf("%d", &arr[i]);
+	}
+	
+	printf("\nSeleccione el método de ordenamiento:\n");
+	printf("1. Burbuja\n");
+	printf("2. Selección\n");
+	printf("Ingrese su opción: ");
+	scanf("%d", &choice);
+	
+	switch (choice) {
+	case 1:
+		bubbleSort(arr, n);
+		printf("\nArreglo ordenado con el método burbuja:\n");
+		break;
+	case 2:
+		selectionSort(arr, n);
+		printf("\nArreglo ordenado con el método de selección:\n");
+		break;
+	default:
+		printf("\nOpción no válida.\n");
+		return 1;
+	}
+	
+	printArray(arr, n);
+	
+	return 0;
+}
